@@ -1,17 +1,18 @@
-Name    : dummy-packages
-Summary : Dummy packages to take the place of real packages if they don't exist
-Version : 0.0.%{?build_number}%{!?build_number:x}
-Release : 1
-
-Requires   : bash, wget, curl, rsync, grep
-Requires   : zip, unzip, tar, gzip
-
+Name      : dummy-packages
+Summary   : Dummy packages to take the place of real packages if they don't exist
+Version   : 0.0.%{?build_number}%{!?build_number:x}
+Release   : 1
 BuildArch : noarch
 Packager  : PoiXson <support@poixson.com>
 License   : AGPLv3
 URL       : https://poixson.com/
 
+Requires  : bash, wget, curl, rsync, grep
+Requires  : zip, unzip, tar, gzip
+
 %define _rpmfilename  %%{NAME}-%%{VERSION}-%%{RELEASE}.%%{ARCH}.rpm
+%global source_date_epoch_from_changelog 0
+%define source_date_epoch 0
 
 
 
